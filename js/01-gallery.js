@@ -44,9 +44,9 @@ const instance = basicLightbox.create(
       onShow: (instance) => {
         window.addEventListener('keydown', onEscKeyPress);
       },
-      // onClose: (instance) => {
-      //   window.removeEventListener('keydown', onEscKeyPress);
-      // },
+      onClose: (instance) => {
+        window.removeEventListener('keydown', onEscKeyPress);
+      },
     }
   );
   instance.show();
